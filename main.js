@@ -70,7 +70,7 @@ $(function() {
 $(document).ready(function(){
   $('.recomendations').slick({
     autoplay: true,
-    speed: 500,
+    speed: 700,
     arrows: true,
   });
 });
