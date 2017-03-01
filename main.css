@@ -41,7 +41,9 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 input, select { vertical-align: middle; }
 
-
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -106,7 +108,7 @@ body {
 
 h1 {
   font-family: 'Passion One', cursive;
-  font-size: 6em;
+  font-size: 5em;
 }
 
 .text p {
@@ -324,7 +326,7 @@ body2 {
               0 8px 6px 3px rgba(0,0,0,0.2);
   margin: 40px;
   background-color: #fff;
-  width: 95%;
+  width: 93%;
   color: #383838;
   display: flex;
   flex-wrap: wrap;
@@ -338,7 +340,7 @@ body2 {
   color: #222222;
 }
 .sidebar {
-    width: 25%;
+    width: 30%;
     padding: 10px 40px 40px 40px;
     background-color: #F0DF41;
   }
@@ -372,7 +374,7 @@ body2 {
   font-weight: bold;
 }
 .main {
-  width: 69%;
+  width: 70%;
 }
 
 .top {
@@ -406,7 +408,7 @@ body2 {
   align-content: space-between;
   padding: 20px;
   background-color: #EEEEEE;
-  height: 55vh;
+  height: auto;
   font-size: .9em;
 }
 
@@ -423,7 +425,7 @@ body2 {
 .bottom span2 {
   font-size: .75em;
 }
-.experience, .education, .skills, .recognition {
+.info-container {
   width: 45%;
   padding: 10px;
 }
@@ -528,7 +530,8 @@ body2 .details h3 {
   .intro {
     display: flex;
     flex-direction: row;
-    padding: 40px 0 0 20px;
+    margin-top: -150px;
+    padding: 20px 0 0 20px;
     width: 100%;
     overflow: hidden;
   }
@@ -547,13 +550,11 @@ body2 .details h3 {
   .portrait-image {
     height: 180px;
     padding-right: 30px;
-    margin-top: 170px;
+    margin-top: 320px;
   }
 
   nav {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+    width: 45%;
   }
   nav li a {
     padding-right: 10px;
@@ -625,4 +626,144 @@ body2 .details h3 {
   .experience, .education {
     width: 100%;
   }
+}
+
+@media screen and (min-width: 416px) and (max-width: 619px){
+  .logo-container {
+    padding-left: 20px;
+    /*width: 60%;*/
+  }
+  .logo {
+    height: 40px;
+  }
+
+  .text {
+    align-self:center;
+    padding-left: 20px;
+  }
+  .text p {
+    text-align: left;
+    width: 75%;
+    padding-bottom: 50px;
+    font-size: 0.5em;
+  }
+
+  h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 2em;
+  }
+
+  .portrait-image {
+    height: 280px;
+    padding-right: 30px;
+    margin-top: 170px;
+  }
+
+    nav {
+      width: 40%;
+    }
+    nav li a {
+      padding-right: 10px;
+      font-size: .55em;
+    }
+    nav li:nth-child(1) {
+      padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 860px) {
+  h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 2.5em;
+  }
+
+  .portrait-image {
+    height: 350px;
+    padding-right: 30px;
+    margin-top: 170px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px){
+  .info-container {
+    width: 100%;
+    text-align: center;
+  }
+  .info-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .info-container ul li {
+  text-align: center;
+  }
+
+  .bottom div:nth-child(odd){
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 940px){
+  .about-content {
+    box-shadow: 0 7px 7px 0 rgba(0,0,0,0.12),
+                0 6px 10px 0 rgba(0,0,0,0.12),
+                0 8px 6px 3px rgba(0,0,0,0.2);
+    margin: 40px;
+    background-color: #fff;
+    width: 88%;
+    color: #383838;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 940px) and (max-width: 1025px){
+  .bottom {
+    height:auto;
+    margin-top:100px;
+  }
+  .sidebar {
+    width:30%;
+  }
+  .main {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1026px) and (max-width: 1405px){
+  .bottom {
+    height: 70vh;
+    margin-top: -60px;
+  }
+  .sidebar {
+    width:30%;
+  }
+  .main {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1405px){
+  .top {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .recomendations {
+    width: 100%;
+  }
+  .portrait-color {
+    height: 350px;
+    align-self: center;
+  }
+
 }
